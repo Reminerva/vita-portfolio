@@ -2,6 +2,7 @@
   --bg: #111111;
   --placeholder: #1b1b1b;
   --text: #e8e8e8;
+  --max-width: 1600px; /* batas lebar slide; makin kecil = makin "tidak penuh" */
   --gap: 0px; /* jarak antar slide; 0 = menyatu */
 }
 
@@ -26,6 +27,8 @@ body {
 
 .deck {
   width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: var(--gap);

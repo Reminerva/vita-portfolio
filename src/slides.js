@@ -1,10 +1,11 @@
 // Membaca semua file src/slides/slide-{angka}.{ext} secara otomatis.
 // Tambah / ganti slide cukup dengan menaruh / menimpa file, tanpa ubah kode.
 
+// svg diperlakukan sebagai gambar (dirender lewat <img>)
 const VIDEO_EXT = ['mp4', 'webm']
 
 const modules = import.meta.glob(
-  '/src/slides/slide-*.{png,jpg,jpeg,webp,gif,mp4,webm}',
+  '/src/slides/slide-*.{png,jpg,jpeg,webp,gif,svg,mp4,webm}',
   { eager: true, query: '?url', import: 'default' }
 )
 
